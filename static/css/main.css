@@ -126,7 +126,7 @@ body {
   float: right; /* 右浮动，和文字在同一行 */
   margin: 0 0 1.5rem 2rem; /* 下、左外边距，避免遮挡文字 */
   z-index: 1;
-  max-width: 200px; /* 限制头像最大宽度 */
+  max-width: 400px; /* 限制头像最大宽度 */
 }
 
 #avatar img {
@@ -139,6 +139,7 @@ body {
   object-fit: cover; /* 防止图片拉伸变形 */
   will-change: transform, box-shadow; /* 性能优化 */
   vertical-align: top; /* 确保图片顶端和文字顶端对齐 */
+  display: block;
 }
 
 /* 头像悬停效果 */
@@ -223,7 +224,7 @@ section .main-body {
     float: none;
     margin: 0 auto 2rem;
     display: block;
-    max-width: 180px;
+    max-width: 360px;
   }
 
   .top-section {
@@ -234,7 +235,7 @@ section .main-body {
 
 @media screen and (max-width: 576px) {
   #avatar img {
-    max-width: 150px;
+    max-width: 300px;
   }
 
   .top-section {
