@@ -1,1 +1,5 @@
-- **J. Zhao**, W. Chen, Y. Feng, Z. Jia, Z. -H. Luo and J. Zhou, "Pan-cancer Single Cell Atlas Reveals Tumor Hallmark Gene Modules and Their Clinical Relevance," 2024 3rd International Conference on Health Big Data and Intelligent Healthcare (ICHIH), Zhuhai, China, 2024, pp. 222-227, doi: 10.1109/ICHIH63459.2024.11064793. [**IEEE Xplore**](https://ieeexplore.ieee.org/document/11064793)
+-  Zhao J#, **Zhao J**#, Huang W#, Lin W, Jie K, Wu Z, Li B*, Fan L*, Wang X*. "Decoding metabolic reprogramming heterogeneity across bladder cancer stages using single-cell and spatial multi-omics approaches." **Comput Methods Programs Biomed**, 2026. [**Link**](https://www.sciencedirect.com/journal/computer-methods-and-programs-in-biomedicine)
+
+
+
+- **J. Zhao#**, W. Chen, Y. Feng, Z. Jia, Z. -H. Luo and J. Zhou*. "Pan-cancer Single Cell Atlas Reveals Tumor Hallmark Gene Modules and Their Clinical Relevance." **ICHIH**, 2024. [**IEEE Xplore**](https://ieeexplore.ieee.org/document/11064793)
