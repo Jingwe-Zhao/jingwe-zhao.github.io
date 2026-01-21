@@ -5,11 +5,8 @@
 - **阅读数量**: 70,000+
   
 <p align="center">
-  <img src="/assets/img/teach.png" 
+  <img src="/static/assets/img/teach.png" 
        alt="「空间组学」微信公众号展示图" 
        width="600" 
-       style="max-width: 100%; 
-              height: auto; 
-              object-fit: cover;
-              aspect-ratio: 1897/899; /* 固定原图片比例 */" />
+       style="max-width: 100%; height: auto; object-fit: contain; aspect-ratio: 1897/899;" />
 </p>
