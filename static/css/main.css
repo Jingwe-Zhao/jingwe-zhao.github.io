@@ -133,37 +133,6 @@ body {
 }
 
 /* =========================
-   HOME 内容区头像样式 - 核心修改（放大2倍+顶端对齐）
-   ========================= */
-#avatar {
-  position: relative;
-  float: right; /* 右浮动，和文字在同一行 */
-  margin: 0 0 1.5rem 2rem; /* 下、左外边距，避免遮挡文字 */
-  z-index: 1;
-  max-width: 300px; /* 原200px，放大2倍改为400px */
-  line-height: 0; /* 消除容器行高对对齐的影响 */
-}
-
-#avatar img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* 圆角优化 */
-  box-shadow: 0 4px 12px var(--shadow-light); /* 更自然的阴影 */
-  border: 4px solid var(--bg-white); /* 柔和白边框替代纯白 */
-  transition: var(--transition-default);
-  object-fit: cover; /* 防止图片拉伸变形 */
-  will-change: transform, box-shadow; /* 性能优化 */
-  vertical-align: top; /* 确保图片顶端和文字顶端对齐 */
-  display: block; /* 消除行内元素间隙，精准对齐 */
-}
-
-/* 头像悬停效果 */
-#avatar img:hover {
-  transform: translateY(-5px); /* 轻微上浮 */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); /* 加深阴影 */
-}
-
-/* =========================
    文本样式
    ========================= */
 section header h2 {
