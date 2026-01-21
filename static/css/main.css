@@ -35,6 +35,7 @@
   --spacing-lg: 5rem;
   --header-height: 25rem;
   --header-height-mobile: 20rem;
+  --nav-height: 60px; /* 新增：导航栏高度，用于计算内容偏移 */
 }
 
 /* 基础重置 - 提升兼容性 */
@@ -48,18 +49,27 @@ body {
   background-color: var(--bg-white); /* 全局背景替换纯白 */
   color: var(--text-main);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding-top: var(--nav-height); /* 新增：避免页面内容被固定导航栏遮挡 */
 }
 
 /* =========================
    布局组件样式
    ========================= */
-/* 头部样式 */
+/* 头部样式 - 核心修改：固定导航栏并始终显示 */
 .header {
   border-bottom: solid 2px var(--border-color);
   z-index: 10000;
-  position: relative; /* 确保z-index生效 */
+  position: fixed; /* 核心：固定在顶部 */
+  top: 0; /* 贴紧顶部 */
+  left: 0; /* 贴紧左侧 */
+  width: 100%; /* 占满全屏宽度 */
+  height: var(--nav-height); /* 固定导航栏高度 */
+  background-color: var(--bg-white); /* 新增：背景色，避免透明导致内容穿透 */
   transition: var(--transition-default);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影增强层级 */
+  display: block !important; /* 强制显示，覆盖可能的隐藏样式 */
+  visibility: visible !important; /* 确保可见性 */
+  opacity: 1 !important; /* 确保不透明 */
 }
 
 /* 导航链接交互（补充） */
@@ -67,6 +77,9 @@ body {
   color: var(--text-main);
   text-decoration: none;
   transition: var(--transition-default);
+  line-height: var(--nav-height); /* 让导航链接垂直居中 */
+  padding: 0 1rem; /* 增加内边距，提升点击体验 */
+  display: inline-block; /* 确保行高生效 */
 }
 .header a:hover {
   color: var(--h-title-color-hover);
@@ -87,6 +100,7 @@ body {
   background-size: cover;
   height: var(--header-height);
   overflow: hidden; /* 防止内容溢出 */
+  margin-top: 0; /* 确保顶部区域紧贴导航栏下方 */
 }
 
 .top-section h2 {
@@ -119,14 +133,15 @@ body {
 }
 
 /* =========================
-   HOME 内容区头像样式 - 核心修改
+   HOME 内容区头像样式 - 核心修改（放大2倍+顶端对齐）
    ========================= */
 #avatar {
   position: relative;
   float: right; /* 右浮动，和文字在同一行 */
   margin: 0 0 1.5rem 2rem; /* 下、左外边距，避免遮挡文字 */
   z-index: 1;
-  max-width: 400px; /* 限制头像最大宽度 */
+  max-width: 400px; /* 原200px，放大2倍改为400px */
+  line-height: 0; /* 消除容器行高对对齐的影响 */
 }
 
 #avatar img {
@@ -139,7 +154,7 @@ body {
   object-fit: cover; /* 防止图片拉伸变形 */
   will-change: transform, box-shadow; /* 性能优化 */
   vertical-align: top; /* 确保图片顶端和文字顶端对齐 */
-  display: block;
+  display: block; /* 消除行内元素间隙，精准对齐 */
 }
 
 /* 头像悬停效果 */
@@ -224,18 +239,27 @@ section .main-body {
     float: none;
     margin: 0 auto 2rem;
     display: block;
-    max-width: 360px;
+    max-width: 360px; /* 原180px，放大2倍改为360px */
   }
 
   .top-section {
     padding: var(--spacing-lg) 0;
     height: var(--header-height-mobile);
   }
+
+  /* 移动端导航栏适配 */
+  .header {
+    --nav-height: 50px; /* 移动端降低导航栏高度 */
+    height: var(--nav-height);
+  }
+  body {
+    padding-top: var(--nav-height); /* 同步调整内容偏移 */
+  }
 }
 
 @media screen and (max-width: 576px) {
   #avatar img {
-    max-width: 300px;
+    max-width: 300px; /* 原150px，放大2倍改为300px */
   }
 
   .top-section {
