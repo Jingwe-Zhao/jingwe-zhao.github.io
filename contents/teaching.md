@@ -4,4 +4,6 @@
 
 - **阅读数量**: 70,000+
   
-<img width="1897" height="899" alt="teach" src="https://github.com/user-attachments/assets/0d7cc24b-b238-4a56-b90f-db0252509cee" />
+<p align="center">
+  <img src="/assets/img/teaching.png" alt="相关内容" width="600" style="max-width: 100%; height: auto; object-fit: cover;">
+</p>
