@@ -7,6 +7,6 @@
 <p align="center">
   <img src="/static/assets/img/teach.png" 
        alt="「空间组学」微信公众号展示图" 
-       width="600" 
+       width="1000" 
        style="max-width: 100%; height: auto; object-fit: contain; aspect-ratio: 1897/899;" />
 </p>
