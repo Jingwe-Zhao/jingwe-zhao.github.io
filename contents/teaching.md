@@ -4,4 +4,4 @@
 
 - **阅读数量**: 70,000+
   
-<img width="3794" height="1798" alt="teach" src="https://github.com/user-attachments/assets/8cae5e06-1d78-4e1b-a0a1-2120c24e37f4" />
+<img width="1897" height="899" alt="teach" src="https://github.com/user-attachments/assets/0d7cc24b-b238-4a56-b90f-db0252509cee" />
