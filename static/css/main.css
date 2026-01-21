@@ -79,43 +79,28 @@ body {
   transition: var(--transition-default);
 }
 
-/* 顶部区域 - 核心修改：调整垂直对齐为flex-start（顶端对齐） */
+/* 顶部区域 */
 .top-section {
   position: relative;
-  padding: 4rem 2rem; /* 调整内边距，适配水平布局 */
+  padding: var(--spacing-xl) 0;
   background-position: center;
   background-size: cover;
-  /* 移除固定高度，改为自适应内容 */
-  min-height: 25rem; 
+  height: var(--header-height);
   overflow: hidden; /* 防止内容溢出 */
-  display: flex; /* 新增：弹性布局 */
-  align-items: flex-start; /* 核心修改：垂直顶端对齐 */
-  justify-content: space-between; /* 左右分布 */
-  gap: 2rem; /* 文字与头像之间的间距 */
 }
 
 .top-section h2 {
   font-weight: 400;
   color: var(--bg-white); /* 用柔和白替代纯白，提升可读性 */
   text-shadow: 0 2px 4px var(--shadow-light); /* 文字阴影提升可读性 */
-  margin-top: 0; /* 确保标题无顶部外边距，精准对齐 */
-}
-
-/* 给姓名标题单独加样式（如果需要精准控制） */
-.top-section .name-title {
-  margin-top: 0;
-  line-height: 1.2; /* 收紧行高，对齐更精准 */
 }
 
 .top-section .top-section__content { /* BEM命名规范 */
   position: relative;
   z-index: 1;
-  flex: 1; /* 新增：文字区域占剩余空间 */
-  max-width: 70%; /* 限制文字区域宽度，避免挤压头像 */
-  padding-top: 0; /* 移除顶部内边距 */
 }
 
-/* 顶部区域遮罩 - 保留渐变遮罩 */
+/* 顶部区域遮罩 - 更柔和的渐变遮罩 */
 .top-section::before {
   content: "";
   position: absolute;
@@ -129,7 +114,6 @@ body {
     rgba(0, 0, 0, 0.5)
   );
   transition: var(--transition-default);
-  z-index: 0; /* 确保遮罩在最底层 */
 }
 
 /* =========================
@@ -146,7 +130,6 @@ section header h2 {
   margin-bottom: 1.5rem; /* 增加底部间距 */
   font-weight: 600; /* 增强标题视觉权重 */
   letter-spacing: 0.5px; /* 字母间距优化 */
-  margin-top: 0; /* 确保标题无顶部外边距 */
 }
 
 section .main-body {
@@ -201,36 +184,28 @@ section .main-body {
 }
 
 /* =========================
-   头像样式 - 核心修改：确保头像顶端精准对齐
+   头像样式
    ========================= */
 #avatar {
   position: relative;
-  /* 移除所有悬浮相关的定位属性 */
-  height: auto; 
-  top: auto;
-  max-width: 30%; /* 头像区域占30%宽度 */
-  margin: 0; /* 重置外边距 */
-  float: none; /* 取消浮动 */
-  z-index: 1; /* 与文字同层级 */
-  display: flex;
-  align-items: flex-start; /* 核心修改：头像容器顶端对齐 */
-  justify-content: flex-end; /* 头像右对齐 */
-  padding-top: 0; /* 移除顶部内边距 */
+  height: 0;
+  /* 移动端：头像上移距离适配，最小-65px，最大-100px，按屏幕宽度1/12动态调整 */
+  top: min(-65px, max(-100px, calc(-1 * 100vw / 12)));
+  max-width: 55em;
+  margin: 0 1.5rem 0 0;
+  float: right;
+  z-index: 9000;
+  transition: var(--transition-default);
 }
 
 #avatar img {
-  height: auto; /* 改为auto，配合宽度自适应 */
-  width: 100%; /* 宽度占满父容器 */
-  max-width: 200px; /* 头像最大宽度 */
-  min-width: 130px; /* 头像最小宽度 */
+  height: max(130px, min(200px, calc(100vw / 6)));
   border-radius: 8px; /* 圆角优化 */
   box-shadow: 0 4px 12px var(--shadow-light); /* 更自然的阴影 */
   border: 4px solid var(--bg-white); /* 柔和白边框替代纯白 */
   transition: var(--transition-default);
   object-fit: cover; /* 防止图片拉伸变形 */
   will-change: transform, box-shadow; /* 性能优化 */
-  margin-top: 0; /* 核心：移除头像顶部外边距，确保顶端对齐 */
-  display: block; /* 消除图片默认的行内间隙 */
 }
 
 /* 头像悬停效果 */
@@ -242,25 +217,20 @@ section .main-body {
 /* =========================
    响应式适配
    ========================= */
-/* 中等屏幕 - 头像与文字改为垂直排列 */
+/* 中等屏幕 */
 @media screen and (max-width: 991px) {
-  .top-section {
-    flex-direction: column; /* 垂直布局 */
-    text-align: center; /* 文字居中 */
-    padding: 3rem 1.5rem;
-    min-height: 20rem;
-    align-items: center; /* 移动端改为居中对齐 */
-  }
-
-  .top-section .top-section__content {
-    max-width: 100%; /* 文字区域占满宽度 */
-    margin-bottom: 2rem; /* 文字与头像之间的间距 */
-  }
-
   #avatar {
-    max-width: 180px; /* 移动端头像宽度 */
-    justify-content: center; /* 头像居中 */
-    align-items: center; /* 移动端头像居中 */
+    margin: 0 auto;
+    float: none; /* 移动端居中 */
+    display: flex;
+    justify-content: center;
+    /* 移动端头像上移距离适配 */
+    top: min(-50px, max(-80px, calc(-1 * 100vw / 15)));
+  }
+  
+  .top-section {
+    padding: var(--spacing-lg) 0; /* 移动端减少内边距 */
+    height: var(--header-height-mobile); /* 移动端降低高度 */
   }
 }
 
@@ -271,31 +241,13 @@ section .main-body {
   }
   
   #avatar img {
-    max-width: 150px; /* 小屏头像更小 */
-    min-width: 100px;
-  }
-
-  .top-section {
-    min-height: 18rem;
+    height: max(100px, min(180px, calc(100vw / 5))); /* 适配小屏头像尺寸 */
   }
 }
 
 /* 移动端横竖屏适配 */
 @media screen and (max-width: 991px) and (orientation: landscape) {
   .top-section {
-    flex-direction: row; /* 横屏时恢复水平布局 */
-    text-align: left;
-    min-height: 15rem;
-    align-items: flex-start; /* 横屏恢复顶端对齐 */
-  }
-
-  .top-section .top-section__content {
-    max-width: 60%;
-    margin-bottom: 0;
-  }
-
-  #avatar {
-    max-width: 120px;
-    align-items: flex-start; /* 横屏头像顶端对齐 */
+    height: 15rem; /* 横屏时降低顶部区域高度 */
   }
 }
