@@ -5,5 +5,5 @@
 - **阅读数量**: 70,000+
   
 <p align="center">
-  <img src="/assets/img/teaching.png" alt="相关内容" width="600" style="max-width: 100%; height: auto; object-fit: cover;">
+  <img src="/assets/img/teach.png" alt="相关内容" width="600" style="max-width: 100%; height: auto; object-fit: cover;">
 </p>
