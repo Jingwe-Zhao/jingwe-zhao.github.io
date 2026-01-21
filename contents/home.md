@@ -1,6 +1,9 @@
-<img src="/static/assets/img/photo.png" align="right" width="180" style="margin-left: 15px; border-radius: 50%;" />
+<img src="/static/assets/img/photo.png" align="right" width="270"
+     class="profile-hover"
+     style="margin-left:20px;" />
 
 [![JingweiZhao](https://img.shields.io/badge/JingweiZhao-github-blue?logo=github)](https://github.com/Jingwe-Zhao)
+
 
 I’m a Ph.D. candidate👨🏼‍🎓 in physiology at Xiamen University School of Medicine.
 
