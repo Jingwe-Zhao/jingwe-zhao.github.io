@@ -1,6 +1,6 @@
 <img src="/static/assets/img/photo.png" align="right" width="270"
      class="profile-hover"
-     style="margin-left:20px;" />
+     style="margin-left:20px; border-radius: 12px;" /> <!-- 新增圆角，和CSS匹配 -->
 
 [![JingweiZhao](https://img.shields.io/badge/JingweiZhao-github-blue?logo=github)](https://github.com/Jingwe-Zhao)
 
