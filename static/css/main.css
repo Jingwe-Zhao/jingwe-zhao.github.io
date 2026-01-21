@@ -79,7 +79,7 @@ body {
   transition: var(--transition-default);
 }
 
-/* 顶部区域 - 核心修改：改为弹性布局，实现文字+头像水平排列 */
+/* 顶部区域 - 核心修改：调整垂直对齐为flex-start（顶端对齐） */
 .top-section {
   position: relative;
   padding: 4rem 2rem; /* 调整内边距，适配水平布局 */
@@ -89,7 +89,7 @@ body {
   min-height: 25rem; 
   overflow: hidden; /* 防止内容溢出 */
   display: flex; /* 新增：弹性布局 */
-  align-items: center; /* 垂直居中 */
+  align-items: flex-start; /* 核心修改：垂直顶端对齐 */
   justify-content: space-between; /* 左右分布 */
   gap: 2rem; /* 文字与头像之间的间距 */
 }
@@ -98,6 +98,13 @@ body {
   font-weight: 400;
   color: var(--bg-white); /* 用柔和白替代纯白，提升可读性 */
   text-shadow: 0 2px 4px var(--shadow-light); /* 文字阴影提升可读性 */
+  margin-top: 0; /* 确保标题无顶部外边距，精准对齐 */
+}
+
+/* 给姓名标题单独加样式（如果需要精准控制） */
+.top-section .name-title {
+  margin-top: 0;
+  line-height: 1.2; /* 收紧行高，对齐更精准 */
 }
 
 .top-section .top-section__content { /* BEM命名规范 */
@@ -105,6 +112,7 @@ body {
   z-index: 1;
   flex: 1; /* 新增：文字区域占剩余空间 */
   max-width: 70%; /* 限制文字区域宽度，避免挤压头像 */
+  padding-top: 0; /* 移除顶部内边距 */
 }
 
 /* 顶部区域遮罩 - 保留渐变遮罩 */
@@ -138,6 +146,7 @@ section header h2 {
   margin-bottom: 1.5rem; /* 增加底部间距 */
   font-weight: 600; /* 增强标题视觉权重 */
   letter-spacing: 0.5px; /* 字母间距优化 */
+  margin-top: 0; /* 确保标题无顶部外边距 */
 }
 
 section .main-body {
@@ -192,7 +201,7 @@ section .main-body {
 }
 
 /* =========================
-   头像样式 - 核心修改：移除悬浮定位，改为水平布局
+   头像样式 - 核心修改：确保头像顶端精准对齐
    ========================= */
 #avatar {
   position: relative;
@@ -204,8 +213,9 @@ section .main-body {
   float: none; /* 取消浮动 */
   z-index: 1; /* 与文字同层级 */
   display: flex;
-  align-items: center; /* 头像垂直居中 */
+  align-items: flex-start; /* 核心修改：头像容器顶端对齐 */
   justify-content: flex-end; /* 头像右对齐 */
+  padding-top: 0; /* 移除顶部内边距 */
 }
 
 #avatar img {
@@ -219,6 +229,8 @@ section .main-body {
   transition: var(--transition-default);
   object-fit: cover; /* 防止图片拉伸变形 */
   will-change: transform, box-shadow; /* 性能优化 */
+  margin-top: 0; /* 核心：移除头像顶部外边距，确保顶端对齐 */
+  display: block; /* 消除图片默认的行内间隙 */
 }
 
 /* 头像悬停效果 */
@@ -237,6 +249,7 @@ section .main-body {
     text-align: center; /* 文字居中 */
     padding: 3rem 1.5rem;
     min-height: 20rem;
+    align-items: center; /* 移动端改为居中对齐 */
   }
 
   .top-section .top-section__content {
@@ -247,6 +260,7 @@ section .main-body {
   #avatar {
     max-width: 180px; /* 移动端头像宽度 */
     justify-content: center; /* 头像居中 */
+    align-items: center; /* 移动端头像居中 */
   }
 }
 
@@ -272,6 +286,7 @@ section .main-body {
     flex-direction: row; /* 横屏时恢复水平布局 */
     text-align: left;
     min-height: 15rem;
+    align-items: flex-start; /* 横屏恢复顶端对齐 */
   }
 
   .top-section .top-section__content {
@@ -281,5 +296,6 @@ section .main-body {
 
   #avatar {
     max-width: 120px;
+    align-items: flex-start; /* 横屏头像顶端对齐 */
   }
 }
