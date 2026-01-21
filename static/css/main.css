@@ -79,14 +79,19 @@ body {
   transition: var(--transition-default);
 }
 
-/* 顶部区域 */
+/* 顶部区域 - 核心修改：改为弹性布局，实现文字+头像水平排列 */
 .top-section {
   position: relative;
-  padding: var(--spacing-xl) 0;
+  padding: 4rem 2rem; /* 调整内边距，适配水平布局 */
   background-position: center;
   background-size: cover;
-  height: var(--header-height);
+  /* 移除固定高度，改为自适应内容 */
+  min-height: 25rem; 
   overflow: hidden; /* 防止内容溢出 */
+  display: flex; /* 新增：弹性布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 左右分布 */
+  gap: 2rem; /* 文字与头像之间的间距 */
 }
 
 .top-section h2 {
@@ -98,9 +103,11 @@ body {
 .top-section .top-section__content { /* BEM命名规范 */
   position: relative;
   z-index: 1;
+  flex: 1; /* 新增：文字区域占剩余空间 */
+  max-width: 70%; /* 限制文字区域宽度，避免挤压头像 */
 }
 
-/* 顶部区域遮罩 - 更柔和的渐变遮罩 */
+/* 顶部区域遮罩 - 保留渐变遮罩 */
 .top-section::before {
   content: "";
   position: absolute;
@@ -114,6 +121,7 @@ body {
     rgba(0, 0, 0, 0.5)
   );
   transition: var(--transition-default);
+  z-index: 0; /* 确保遮罩在最底层 */
 }
 
 /* =========================
@@ -184,22 +192,27 @@ section .main-body {
 }
 
 /* =========================
-   头像样式
+   头像样式 - 核心修改：移除悬浮定位，改为水平布局
    ========================= */
 #avatar {
   position: relative;
-  height: 0;
-  /* 移动端：头像上移距离适配，最小-65px，最大-100px，按屏幕宽度1/12动态调整 */
-  top: min(-65px, max(-100px, calc(-1 * 100vw / 12)));
-  max-width: 55em;
-  margin: 0 1.5rem 0 0;
-  float: right;
-  z-index: 9000;
-  transition: var(--transition-default);
+  /* 移除所有悬浮相关的定位属性 */
+  height: auto; 
+  top: auto;
+  max-width: 30%; /* 头像区域占30%宽度 */
+  margin: 0; /* 重置外边距 */
+  float: none; /* 取消浮动 */
+  z-index: 1; /* 与文字同层级 */
+  display: flex;
+  align-items: center; /* 头像垂直居中 */
+  justify-content: flex-end; /* 头像右对齐 */
 }
 
 #avatar img {
-  height: max(130px, min(200px, calc(100vw / 6)));
+  height: auto; /* 改为auto，配合宽度自适应 */
+  width: 100%; /* 宽度占满父容器 */
+  max-width: 200px; /* 头像最大宽度 */
+  min-width: 130px; /* 头像最小宽度 */
   border-radius: 8px; /* 圆角优化 */
   box-shadow: 0 4px 12px var(--shadow-light); /* 更自然的阴影 */
   border: 4px solid var(--bg-white); /* 柔和白边框替代纯白 */
@@ -217,20 +230,23 @@ section .main-body {
 /* =========================
    响应式适配
    ========================= */
-/* 中等屏幕 */
+/* 中等屏幕 - 头像与文字改为垂直排列 */
 @media screen and (max-width: 991px) {
-  #avatar {
-    margin: 0 auto;
-    float: none; /* 移动端居中 */
-    display: flex;
-    justify-content: center;
-    /* 移动端头像上移距离适配 */
-    top: min(-50px, max(-80px, calc(-1 * 100vw / 15)));
-  }
-  
   .top-section {
-    padding: var(--spacing-lg) 0; /* 移动端减少内边距 */
-    height: var(--header-height-mobile); /* 移动端降低高度 */
+    flex-direction: column; /* 垂直布局 */
+    text-align: center; /* 文字居中 */
+    padding: 3rem 1.5rem;
+    min-height: 20rem;
+  }
+
+  .top-section .top-section__content {
+    max-width: 100%; /* 文字区域占满宽度 */
+    margin-bottom: 2rem; /* 文字与头像之间的间距 */
+  }
+
+  #avatar {
+    max-width: 180px; /* 移动端头像宽度 */
+    justify-content: center; /* 头像居中 */
   }
 }
 
@@ -241,13 +257,29 @@ section .main-body {
   }
   
   #avatar img {
-    height: max(100px, min(180px, calc(100vw / 5))); /* 适配小屏头像尺寸 */
+    max-width: 150px; /* 小屏头像更小 */
+    min-width: 100px;
+  }
+
+  .top-section {
+    min-height: 18rem;
   }
 }
 
 /* 移动端横竖屏适配 */
 @media screen and (max-width: 991px) and (orientation: landscape) {
   .top-section {
-    height: 15rem; /* 横屏时降低顶部区域高度 */
+    flex-direction: row; /* 横屏时恢复水平布局 */
+    text-align: left;
+    min-height: 15rem;
+  }
+
+  .top-section .top-section__content {
+    max-width: 60%;
+    margin-bottom: 0;
+  }
+
+  #avatar {
+    max-width: 120px;
   }
 }
