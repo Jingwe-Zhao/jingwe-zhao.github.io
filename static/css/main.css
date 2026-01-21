@@ -140,7 +140,7 @@ body {
   float: right; /* 右浮动，和文字在同一行 */
   margin: 0 0 1.5rem 2rem; /* 下、左外边距，避免遮挡文字 */
   z-index: 1;
-  max-width: 400px; /* 原200px，放大2倍改为400px */
+  max-width: 300px; /* 原200px，放大2倍改为400px */
   line-height: 0; /* 消除容器行高对对齐的影响 */
 }
 
@@ -239,7 +239,7 @@ section .main-body {
     float: none;
     margin: 0 auto 2rem;
     display: block;
-    max-width: 360px; /* 原180px，放大2倍改为360px */
+    max-width: 270px; /* 原180px，放大2倍改为360px */
   }
 
   .top-section {
@@ -259,7 +259,7 @@ section .main-body {
 
 @media screen and (max-width: 576px) {
   #avatar img {
-    max-width: 300px; /* 原150px，放大2倍改为300px */
+    max-width: 225px; /* 原150px，放大2倍改为300px */
   }
 
   .top-section {
