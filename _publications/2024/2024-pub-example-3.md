@@ -12,7 +12,7 @@ abstract: >-
   This study integrated single-cell data from four tumor types, identified a pan-cancer tumor hallmark gene set, and verified its superior performance in tumor sample identification using machine learning. Meanwhile, we employed hdWGCNA to identify core gene modules closely associated with the tumor microenvironment and clinical prognosis.
 cover:          /assets/images/covers/EI.jpg
 authors:
-  - **Jingwei Zhao**
+  - __Jingwei Zhao__
   - Weiming Chen
   - Ying Feng
   - Zhiping Jia
