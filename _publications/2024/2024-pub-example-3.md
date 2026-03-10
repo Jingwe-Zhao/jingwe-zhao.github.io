@@ -17,7 +17,7 @@ authors:
   - Ying Feng
   - Zhiping Jia
   - Zhi-Hui Luo
-  - Jingjiao Zhou
+  - Jingjiao Zhou*
 links:
   Paper: https://ieeexplore.ieee.org/document/11064793/
 ---
