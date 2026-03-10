@@ -1,6 +1,6 @@
 ---
 title:          "Pan-cancer Single Cell Atlas Reveals Tumor Hallmark Gene Modules and Their Clinical Relevance"
-date:           2024-12-13
+date:           2025-07-09
 selected:       true
 pub:            "International Conference on Big Data and Intelligent Healthcare (ICHIH)"
 # pub_pre:        "Submitted to "
