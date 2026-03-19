@@ -10,7 +10,7 @@ pub_last:       ' <span class="badge badge-pill badge-publication badge-success"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
 abstract: >-
   Using single-cell and spatial multi-omics, this study systematically dissects stage-dependent metabolic reprogramming in BLCA, highlighting the spatiotemporal dynamics of riboflavin metabolism. We further build a prognostic model using key metabolic genes and validate its clinical relevance via multi-omics integration and Mendelian randomization.
-cover:          /assets/images/covers/ComputeMethod.jpg
+cover:          /assets/images/covers/CellMolLifeSci.jpg
 authors:
   - Zhi-Hui Luo*
   - Weiming Chen*
@@ -23,5 +23,5 @@ authors:
   - Fubing Wang#
   - Jingjiao Zhou#
 links:
-  Paper: https://link.springer.com/journal/18
+  Paper: https://link.springer.com/article/10.1007/s00018-026-06167-4
 ---
