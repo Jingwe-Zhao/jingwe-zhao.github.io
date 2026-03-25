@@ -5,7 +5,7 @@ selected:       true
 pub:            "Cell Mol Life Sci"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">中科院二区Top, IF:6.2</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">新锐一区Top, IF:6.2</span>'
 #pub_date:       "2024"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
 abstract: >-
