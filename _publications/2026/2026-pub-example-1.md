@@ -2,7 +2,7 @@
 title:          "Decoding metabolic reprogramming heterogeneity across bladder cancer stages using single-cell and spatial multi-omics approaches"
 date:           2026-01-20
 selected:       true
-pub:            "**Comput Methods Programs Biomed**"
+pub:            "Comput Methods Programs Biomed"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">新锐二区Top, IF:4.8</span>'
