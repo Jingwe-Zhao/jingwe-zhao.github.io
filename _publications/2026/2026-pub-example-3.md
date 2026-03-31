@@ -2,7 +2,7 @@
 title:          "Integrated Spatial Multi-omics Delineates Fatty Acid Degradation Fuels Malignant Evolution at the Tumor Periphery in Cervical Squamous Cell Carcinoma"
 date:           2026-03-31
 selected:       true
-pub:            "**eBioMedicine**"
+pub:            "eBioMedicine"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">新锐一区Top, IF:10.8</span>'
