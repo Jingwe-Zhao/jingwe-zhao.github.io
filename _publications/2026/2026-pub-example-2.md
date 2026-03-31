@@ -2,7 +2,7 @@
 title:          "Computational analysis of multi-omics data reveals CXCL10+ DC-Treg interaction drives immunosuppressive microenvironment in AFP-positive hepatocellular carcinoma"
 date:           2026-02-25
 selected:       true
-pub:            "Cell Mol Life Sci"
+pub:            "**Cell Mol Life Sci**"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">新锐一区Top, IF:6.2</span>'
