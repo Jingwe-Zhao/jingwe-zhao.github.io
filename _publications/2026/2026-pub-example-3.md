@@ -30,7 +30,7 @@ authors:
   - Ruizhi Li
   - Jingwei Zhao
   - Jingmin Zhang
-  - Lingfang Wang
+  - Lingfang Wang#
   - Chaolong Wang#
   - Fang Ren#
   - Peng Wu#
