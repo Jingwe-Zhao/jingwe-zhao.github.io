@@ -9,7 +9,7 @@ pub_last:       ' <span class="badge badge-pill badge-publication badge-success"
 #pub_date:       "2025"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
 abstract: >-
-  This study integrated spatial multi-omics reveals that fatty acid degradation fuels malignant evolution at the tumor periphery in cervical squamous cell carcinoma, delineating the metabolic basis of tumor progression and offering potential therapeutic targets for improving clinical outcomes.
+  Spatial multi-omics reveals fatty acid degradation drives malignancy at the cervical cancer periphery, providing metabolic insights and therapeutic targets.
 cover:          /assets/images/covers/CellMolLifeSci.jpg
 authors:
   - Shitong Lin*
