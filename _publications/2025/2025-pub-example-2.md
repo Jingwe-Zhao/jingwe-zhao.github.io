@@ -12,6 +12,6 @@ pub:            "发明专利，公开"
   
 cover:          /assets/images/covers/STpatent.jpg
 #authors:
-#links:
-  #Paper: https://ieeexplore.ieee.org/document/11064793/
+links:
+  Patent: https://www.patentstar.com.cn/
 ---
