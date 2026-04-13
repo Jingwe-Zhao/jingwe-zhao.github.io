@@ -8,8 +8,8 @@ pub:            "Comput Methods Programs Biomed"
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">新锐二区Top, IF:4.8</span>'
 #pub_date:       "2024"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
-abstract: >-
-  Using single-cell and spatial multi-omics, this study systematically dissects stage-dependent metabolic reprogramming in BLCA, highlighting the spatiotemporal dynamics of riboflavin metabolism. We further build a prognostic model using key metabolic genes and validate its clinical relevance via multi-omics integration and Mendelian randomization.
+#abstract: >-
+ 
 cover:          /assets/images/covers/ComputeMethod.jpg
 authors:
   - Jiang Zhao*#
