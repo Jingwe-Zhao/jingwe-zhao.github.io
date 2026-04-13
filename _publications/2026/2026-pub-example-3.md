@@ -8,8 +8,8 @@ pub:            "eBioMedicine"
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">新锐一区Top, IF:10.8</span>'
 #pub_date:       "2025"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
-abstract: >-
-  Spatial multi-omics reveals fatty acid degradation drives malignancy at the cervical cancer periphery, providing metabolic insights and therapeutic targets.
+#abstract: >-
+  
 cover:          /assets/images/covers/CellMolLifeSci.jpg
 authors:
   - Shitong Lin*
