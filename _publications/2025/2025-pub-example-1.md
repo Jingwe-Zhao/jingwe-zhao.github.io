@@ -19,5 +19,5 @@ authors:
   - Zhi-Hui Luo
   - Jingjiao Zhou#
 links:
-  Paper: https://ieeexplore.ieee.org/document/11064793/
+  Conference: https://ieeexplore.ieee.org/document/11064793/
 ---
