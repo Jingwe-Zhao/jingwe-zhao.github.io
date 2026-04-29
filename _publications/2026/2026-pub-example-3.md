@@ -1,5 +1,5 @@
 ---
-title:          "Integrated Spatial Multi-omics Delineates Fatty Acid Degradation Fuels Malignant Evolution at the Tumor Periphery in Cervical Squamous Cell Carcinoma"
+title:          "Integrated spatial multi-omics delineates fatty acid degradation fuels malignant evolution at the tumour periphery in cervical squamous cell carcinoma"
 date:           2026-03-31
 selected:       true
 pub:            "eBioMedicine"
@@ -10,13 +10,13 @@ pub_last:       ' <span class="badge badge-pill badge-publication badge-success"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
 #abstract: >-
   
-cover:          /assets/images/covers/CellMolLifeSci.jpg
+cover:          /assets/images/covers/eBioMed.jpg
 authors:
   - Shitong Lin*
   - Zhi-Hui Luo* 
   - Yuting Li*
-  - Bai Hu
-  - Minghan Qu
+  - Bai Hu*
+  - Minghan Qu*
   - Binghan Liu
   - Canhui Cao
   - Ting Peng
@@ -31,9 +31,9 @@ authors:
   - Jingwei Zhao
   - Jingmin Zhang
   - Lingfang Wang#
-  - Chaolong Wang#
   - Fang Ren#
+  - Chaolong Wang#
   - Peng Wu#
 links:
-  Paper: https://www.sciencedirect.com/journal/ebiomedicine
+  Paper: https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(26)00138-6/fulltext
 ---
