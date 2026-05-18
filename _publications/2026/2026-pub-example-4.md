@@ -26,5 +26,5 @@ authors:
   - Chunhui Yuan#
   - Fubing Wang#
 links:
-  Paper: https://journals.plos.org/plosmedicine/
+  Paper: https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004703
 ---
