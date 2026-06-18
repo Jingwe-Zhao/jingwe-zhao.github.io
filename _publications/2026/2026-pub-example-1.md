@@ -5,8 +5,8 @@ selected:       true
 pub:            "Comput Methods Programs Biomed"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">中科院二区, IF:4.8</span>'
-#pub_date:       "2024"
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">中科院二区, IF:6.4</span>'
+#pub_date:       "2026"
 #semantic_scholar_id: 204e3073870fae3d05bcbc2f6a8e263d9b72e776  # use this to retrieve citation count
 #abstract: >-
  
@@ -23,6 +23,10 @@ authors:
   - Xiangwei Wang#
 links:
   Paper: https://doi.org/10.1016/j.cmpb.2026.109261
+        
+        
+        
+        
         
         
         
